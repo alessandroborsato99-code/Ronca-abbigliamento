@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronca 1862 | Abbigliamento Uomo Donna</title>
+    <meta name="description" content="Ronca 1862 - Dal 1862 vestiamo il tuo stile. Scopri le collezioni uomo e donna dei migliori brand italiani e internazionali.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="assets/images/logo-ronca-nero.png" alt="Ronca" class="preloader-logo-img">
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor personalizzato -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Announcement Bar (Top Bar con slider) -->
+    <div class="announcement-bar" id="announcement-bar">
+        <button class="announcement-arrow announcement-prev" aria-label="Precedente">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+        </button>
+        <div class="announcement-slider">
+            <div class="announcement-slide active">Spedizione gratuita sopra i 150&euro;</div>
+            <div class="announcement-slide">Resi gratuiti entro 30 giorni</div>
+            <div class="announcement-slide">Nuova collezione disponibile</div>
+        </div>
+        <button class="announcement-arrow announcement-next" aria-label="Successivo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Secondary Top Bar -->
+    <div class="top-bar-secondary">
+        <div class="top-bar-secondary-content">
+            <div class="currency-selector">
+                <span>EUR &euro;</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </div>
+            <div class="language-selector">
+                <span>IT</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header LAB46 Style -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <!-- Left Nav -->
+            <nav class="header-nav header-nav-left">
+                <a href="#" class="header-nav-link">
+                    <span>SHOP</span>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </a>
+                <a href="#" class="header-nav-link">
+                    <span>BRAND</span>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </a>
+                <a href="#" class="header-nav-link">NEGOZIO</a>
+            </nav>
+
+            <!-- Center Logo -->
+            <a href="/" class="logo">
+                <img src="assets/images/logo-ronca-nero.png" alt="Ronca 1862" class="logo-img">
+            </a>
+
+            <!-- Right Nav -->
+            <nav class="header-nav header-nav-right">
+                <a href="#" class="header-nav-link">ACCOUNT</a>
+                <a href="#" class="header-nav-link cart-link">
+                    SHOPPING CART [<span class="cart-count">0</span>]
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menu Mobile / Desktop Overlay -->
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-content">
+            <div class="nav-links">
+                <div class="nav-item" data-nav="donna">
+                    <a href="#" class="nav-link">
+                        <span class="nav-link-text">Donna</span>
+                        <span class="nav-link-number">01</span>
+                    </a>
+                </div>
+                <div class="nav-item" data-nav="uomo">
+                    <a href="#" class="nav-link">
+                        <span class="nav-link-text">Uomo</span>
+                        <span class="nav-link-number">02</span>
+                    </a>
+                </div>
+                <div class="nav-item" data-nav="accessori">
+                    <a href="#" class="nav-link">
+                        <span class="nav-link-text">Accessori</span>
+                        <span class="nav-link-number">03</span>
+                    </a>
+                </div>
+                <div class="nav-item" data-nav="brand">
+                    <a href="#" class="nav-link">
+                        <span class="nav-link-text">Brand</span>
+                        <span class="nav-link-number">04</span>
+                    </a>
+                </div>
+                <div class="nav-item" data-nav="saldi">
+                    <a href="#" class="nav-link nav-link-accent">
+                        <span class="nav-link-text">Saldi</span>
+                        <span class="nav-link-number">05</span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-footer">
+                <div class="nav-footer-links">
+                    <a href="#">Il Negozio</a>
+                    <a href="#">Contatti</a>
+                    <a href="#">Spedizioni</a>
+                </div>
+                <div class="nav-footer-social">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-image">
+            <img src="assets/images/focus_1_donna631x730_16_jpg.webp" alt="" class="nav-image-el" id="nav-image">
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <button class="search-close" id="search-close" aria-label="Chiudi ricerca">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <form class="search-form">
+                <input type="text" class="search-input" placeholder="Cerca prodotti, brand..." autofocus>
+                <button type="submit" class="search-submit">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </button>
+            </form>
+            <div class="search-suggestions">
+                <span class="search-suggestion-label">Ricerche popolari</span>
+                <div class="search-tags">
+                    <a href="#" class="search-tag">Cappotti</a>
+                    <a href="#" class="search-tag">Sneakers</a>
+                    <a href="#" class="search-tag">Borse</a>
+                    <a href="#" class="search-tag">Maglieria</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section LAB46 Style -->
+        <section class="hero" id="hero">
+            <div class="hero-background">
+                <img src="assets/images/donna_homesaldi_1166x970_jpg.webp" alt="Collezione Donna" class="hero-bg-image">
+            </div>
+
+            <div class="hero-content">
+                <!-- Rating Badge -->
+                <div class="hero-rating">
+                    <div class="hero-stars">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" opacity="0.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <span class="hero-rating-text">DAL 1862 OLTRE 50.000 CLIENTI</span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Stile Italiano</span>
+                    <span class="hero-title-line">Per Chi Ama</span>
+                    <span class="hero-title-line">La Moda</span>
+                </h1>
+
+                <!-- CTA Button LAB46 Style -->
+                <a href="#" class="hero-cta">
+                    <span class="hero-cta-bracket">[</span>
+                    <span class="hero-cta-text">ESPLORA ORA</span>
+                    <span class="hero-cta-bracket">]</span>
+                </a>
+            </div>
+
+            <!-- Floating Product Card -->
+            <div class="hero-product-card">
+                <div class="hero-product-image">
+                    <img src="assets/images/accessori_1_1170x1500_23_jpg.webp" alt="Borsa">
+                </div>
+                <div class="hero-product-info">
+                    <div class="hero-product-top">
+                        <div>
+                            <span class="hero-product-category">ACCESSORI</span>
+                            <h3 class="hero-product-title">Borsa Pelle</h3>
+                        </div>
+                        <div class="hero-product-rating">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <span>[4.8]</span>
+                        </div>
+                    </div>
+                    <p class="hero-product-desc">Eleganza senza tempo</p>
+                    <button class="hero-product-btn">
+                        <span>&euro;189,00</span>
+                        <span class="hero-product-plus">+</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Intro Section -->
+        <section class="about-intro section">
+            <div class="container">
+                <p class="about-intro-text">
+                    RoncaStyle, il tuo riferimento per una moda unica e di tendenza! Siamo un negozio di 2000 metri quadri con un e-commerce online che propone capi di abbigliamento e accessori dallo stile fashion, dirompente e ricercato. Da noi troverai una selezione curata di outfit originali e accessori uomo-donna che ti permetteranno di esprimere la tua personalità e distinguerti dalla massa.
+                </p>
+                <p class="about-intro-text">
+                    La nostra shopping experience unica e coinvolgente ci caratterizza per offrire una varietà di opzioni che si adattino a tutti i gusti e alle diverse occasioni.
+                </p>
+            </div>
+        </section>
+
+        <!-- Three Columns Section -->
+        <section class="three-columns">
+            <a href="#" class="three-col-item">
+                <div class="three-col-image">
+                    <img src="assets/images/focus_1_uomo1750x1759_14_jpg.webp" alt="Uomo">
+                </div>
+                <div class="three-col-content">
+                    <h3 class="three-col-title">Uomo</h3>
+                    <span class="three-col-cta">
+                        <span class="three-col-bracket">[</span>
+                        <span>SHOP NOW</span>
+                        <span class="three-col-bracket">]</span>
+                    </span>
+                </div>
+            </a>
+            <a href="#" class="three-col-item">
+                <div class="three-col-image">
+                    <img src="assets/images/donna_homesaldi_1166x970_jpg.webp" alt="Donna">
+                </div>
+                <div class="three-col-content">
+                    <h3 class="three-col-title">Donna</h3>
+                    <span class="three-col-cta">
+                        <span class="three-col-bracket">[</span>
+                        <span>SHOP NOW</span>
+                        <span class="three-col-bracket">]</span>
+                    </span>
+                </div>
+            </a>
+            <a href="#" class="three-col-item">
+                <div class="three-col-image">
+                    <img src="assets/images/focus_1_donna631x730_16_jpg.webp" alt="Saldi">
+                </div>
+                <div class="three-col-content">
+                    <h3 class="three-col-title">Saldi</h3>
+                    <span class="three-col-cta">
+                        <span class="three-col-bracket">[</span>
+                        <span>SHOP NOW</span>
+                        <span class="three-col-bracket">]</span>
+                    </span>
+                </div>
+            </a>
+        </section>
+
+        <!-- Brands Marquee Section -->
+        <section class="brands-marquee">
+            <span class="brands-label">I NOSTRI BRAND</span>
+            <div class="brands-track">
+                <div class="brands-slide">
+                    <img src="assets/images/Polo-Ralph-Lauren-Logo-Logo-PNG-HD-Isolated.png" alt="Ralph Lauren">
+                    <img src="assets/images/colmar-logo.png" alt="Colmar">
+                    <img src="assets/images/452x236_MC2-BN.png" alt="MC2">
+                    <img src="assets/images/Polo-Ralph-Lauren-Logo-Logo-PNG-HD-Isolated.png" alt="Ralph Lauren">
+                    <img src="assets/images/colmar-logo.png" alt="Colmar">
+                    <img src="assets/images/452x236_MC2-BN.png" alt="MC2">
+                    <img src="assets/images/Polo-Ralph-Lauren-Logo-Logo-PNG-HD-Isolated.png" alt="Ralph Lauren">
+                    <img src="assets/images/colmar-logo.png" alt="Colmar">
+                    <img src="assets/images/452x236_MC2-BN.png" alt="MC2">
+                    <img src="assets/images/Polo-Ralph-Lauren-Logo-Logo-PNG-HD-Isolated.png" alt="Ralph Lauren">
+                    <img src="assets/images/colmar-logo.png" alt="Colmar">
+                    <img src="assets/images/452x236_MC2-BN.png" alt="MC2">
+                    <img src="assets/images/Polo-Ralph-Lauren-Logo-Logo-PNG-HD-Isolated.png" alt="Ralph Lauren">
+                    <img src="assets/images/colmar-logo.png" alt="Colmar">
+                    <img src="assets/images/452x236_MC2-BN.png" alt="MC2">
+                    <img src="assets/images/Polo-Ralph-Lauren-Logo-Logo-PNG-HD-Isolated.png" alt="Ralph Lauren">
+                    <img src="assets/images/colmar-logo.png" alt="Colmar">
+                    <img src="assets/images/452x236_MC2-BN.png" alt="MC2">
+                    <img src="assets/images/Polo-Ralph-Lauren-Logo-Logo-PNG-HD-Isolated.png" alt="Ralph Lauren">
+                    <img src="assets/images/colmar-logo.png" alt="Colmar">
+                    <img src="assets/images/452x236_MC2-BN.png" alt="MC2">
+                    <img src="assets/images/Polo-Ralph-Lauren-Logo-Logo-PNG-HD-Isolated.png" alt="Ralph Lauren">
+                    <img src="assets/images/colmar-logo.png" alt="Colmar">
+                    <img src="assets/images/452x236_MC2-BN.png" alt="MC2">
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="products-grid">
+                <!-- Big Product Left -->
+                <div class="product-big">
+                    <div class="product-image">
+                        <img src="assets/images/accessori_1_1170x1500_23_jpg.webp" alt="Borsa Pelle">
+                        <span class="product-badge">BESTSELLER</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">
+                            <span class="product-category">ACCESSORI</span>
+                            <span class="product-price">&euro;189,00</span>
+                        </div>
+                        <h3 class="product-title">Borsa in Pelle</h3>
+                        <p class="product-desc">Eleganza senza tempo</p>
+                        <button class="product-btn">BUY NOW</button>
+                    </div>
+                </div>
+                <!-- Small Products Right -->
+                <div class="products-small">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/accessori_2_1170x1500e_11_jpg.webp" alt="Sciarpa">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-category">ACCESSORI</span>
+                                <span class="product-price">&euro;79,00</span>
+                            </div>
+                            <h3 class="product-title">Sciarpa Cashmere</h3>
+                            <p class="product-desc">Morbidezza premium</p>
+                            <button class="product-btn">BUY NOW</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/accessori_3_1170x1500_23_jpg.webp" alt="Gioielli">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-category">GIOIELLI</span>
+                                <span class="product-price">&euro;129,00</span>
+                            </div>
+                            <h3 class="product-title">Collana Oro</h3>
+                            <p class="product-desc">Dettagli preziosi</p>
+                            <button class="product-btn">BUY NOW</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/focus_1_uomo1750x1759_14_jpg.webp" alt="Giacca">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-category">UOMO</span>
+                                <span class="product-price">&euro;249,00</span>
+                            </div>
+                            <h3 class="product-title">Giacca Check</h3>
+                            <p class="product-desc">Stile contemporaneo</p>
+                            <button class="product-btn">BUY NOW</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/focus_2_uomo1750x1759_17_jpg.webp" alt="Giubbotto">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-category">UOMO</span>
+                                <span class="product-price">&euro;329,00</span>
+                            </div>
+                            <h3 class="product-title">Giubbotto Denim</h3>
+                            <p class="product-desc">Urban style</p>
+                            <button class="product-btn">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="news-section">
+            <div class="news-grid">
+                <div class="news-image">
+                    <img src="assets/images/blog_1.webp" alt="Blog Ronca Style" id="news-img">
+                </div>
+                <div class="news-content">
+                    <div class="news-slider" id="news-slider">
+                        <div class="news-slide active">
+                            <span class="news-label">DAL NOSTRO BLOG</span>
+                            <h2 class="news-title">Sconti donna Ronca Style: stivali OVYE texani, classici o biker per uno stile contemporaneo e audace</h2>
+                            <a href="#" class="news-cta">
+                                <span class="news-bracket">[</span>
+                                <span>SCOPRI LE NEWS</span>
+                                <span class="news-bracket">]</span>
+                            </a>
+                        </div>
+                        <div class="news-slide">
+                            <span class="news-label">DAL NOSTRO BLOG</span>
+                            <h2 class="news-title">Scopri i 5 capi must-have e i brand più esclusivi da Ronca Style e crea il tuo look natalizio con stile, eleganza e il perfetto rapporto qualità-prezzo.</h2>
+                            <a href="#" class="news-cta">
+                                <span class="news-bracket">[</span>
+                                <span>SCOPRI LE NEWS</span>
+                                <span class="news-bracket">]</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Marquee -->
+        <div class="features-marquee">
+            <div class="features-track">
+                <div class="features-slide">
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> SPEDIZIONE SICURA</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> ASSISTENZA 24/7</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg> SPEDIZIONE GRATIS DA 99&euro;</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> SODDISFATTI O RIMBORSATI</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> SPEDIZIONE SICURA</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> ASSISTENZA 24/7</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg> SPEDIZIONE GRATIS DA 99&euro;</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> SODDISFATTI O RIMBORSATI</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> SPEDIZIONE SICURA</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> ASSISTENZA 24/7</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg> SPEDIZIONE GRATIS DA 99&euro;</span>
+                    <span class="feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> SODDISFATTI O RIMBORSATI</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories Section -->
+        <section class="categories section" id="categories">
+            <div class="container">
+                <div class="section-header" data-scroll>
+                    <span class="section-label">Esplora</span>
+                    <h2 class="section-title">Le Collezioni</h2>
+                </div>
+                <div class="categories-grid">
+                    <a href="#" class="category-card category-card-large" data-scroll data-scroll-delay="0">
+                        <div class="category-image">
+                            <img src="assets/images/focus_1_donna631x730_16_jpg.webp" alt="Donna">
+                        </div>
+                        <div class="category-content">
+                            <span class="category-label">Collezione</span>
+                            <h3 class="category-title">Donna</h3>
+                            <span class="category-cta">
+                                <span class="category-cta-bracket">[</span>
+                                Scopri
+                                <span class="category-cta-bracket">]</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="category-card" data-scroll data-scroll-delay="100">
+                        <div class="category-image">
+                            <img src="assets/images/focus_1_uomo1750x1759_14_jpg.webp" alt="Uomo">
+                        </div>
+                        <div class="category-content">
+                            <span class="category-label">Collezione</span>
+                            <h3 class="category-title">Uomo</h3>
+                            <span class="category-cta">
+                                <span class="category-cta-bracket">[</span>
+                                Scopri
+                                <span class="category-cta-bracket">]</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="category-card" data-scroll data-scroll-delay="200">
+                        <div class="category-image">
+                            <img src="assets/images/focus_2_uomo1750x1759_17_jpg.webp" alt="Nuovi Arrivi">
+                        </div>
+                        <div class="category-content">
+                            <span class="category-label">Just In</span>
+                            <h3 class="category-title">Nuovi Arrivi</h3>
+                            <span class="category-cta">
+                                <span class="category-cta-bracket">[</span>
+                                Scopri
+                                <span class="category-cta-bracket">]</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter section" id="newsletter">
+            <div class="container">
+                <div class="newsletter-content" data-scroll>
+                    <span class="section-label">Newsletter</span>
+                    <h2 class="newsletter-title">Resta aggiornato</h2>
+                    <p class="newsletter-text">Iscriviti per ricevere novità, promozioni esclusive e un 10% di sconto sul primo ordine.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="newsletter-input-wrapper">
+                            <input type="email" class="newsletter-input" placeholder="Il tuo indirizzo email" required>
+                            <button type="submit" class="newsletter-submit">
+                                <span class="btn-bracket">[</span>
+                                <span>ISCRIVITI</span>
+                                <span class="btn-bracket">]</span>
+                            </button>
+                        </div>
+                        <label class="newsletter-checkbox">
+                            <input type="checkbox" required>
+                            <span class="checkmark"></span>
+                            <span>Accetto la <a href="#">privacy policy</a></span>
+                        </label>
+                    </form>
+                    <div class="newsletter-success" id="newsletter-success">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <p>Grazie per l'iscrizione!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/images/logo-ronca-nero.png" alt="Ronca 1862" class="footer-logo">
+                    <p class="footer-tagline">Dal 1862, vestiamo il tuo stile.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-title">Shop</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Donna</a></li>
+                            <li><a href="#">Uomo</a></li>
+                            <li><a href="#">Accessori</a></li>
+                            <li><a href="#">Nuovi Arrivi</a></li>
+                            <li><a href="#">Saldi</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Assistenza</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Contattaci</a></li>
+                            <li><a href="#">Spedizioni</a></li>
+                            <li><a href="#">Resi e Rimborsi</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Guida alle taglie</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Azienda</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Chi siamo</a></li>
+                            <li><a href="#">Il Negozio</a></li>
+                            <li><a href="#">Brand</a></li>
+                            <li><a href="#">Lavora con noi</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Contatti</h4>
+                        <ul class="footer-links footer-contact">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <span>Via I Maggio, 142-160, 37059 Zevio VR</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <a href="tel:+390457850153">045 785 0153</a>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <a href="mailto:amministrazione.ronca1862@legalmail.it">amministrazione.ronca1862@legalmail.it</a>
+                            </li>
+                        </ul>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Instagram">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Facebook">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="WhatsApp">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-payments">
+                    <span>Pagamenti sicuri</span>
+                    <div class="payment-icons">
+                        <svg viewBox="0 0 38 24" width="38" height="24"><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"/><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#fff"/><path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688"/></svg>
+                        <svg viewBox="0 0 38 24" width="38" height="24"><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"/><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#fff"/><circle cx="15" cy="12" r="7" fill="#EB001B"/><circle cx="23" cy="12" r="7" fill="#F79E1B"/><path d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z" fill="#FF5F00"/></svg>
+                        <svg viewBox="0 0 38 24" width="38" height="24"><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"/><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#006FCF"/><path d="M8.971 10.268l.774 1.876H8.203l.768-1.876zm16.075.078h-2.977v.827h2.929v1.239h-2.923v.922h2.977v.739l2.077-2.245-2.077-2.34-.006.858zm-14.063-2.34h3.995l.887 1.935L16.687 8h3.883v5.545l-1.89-5.261h-1.705l-2.344 5.261V8.478l-2.308 5.047H10.59L8.161 8.006h4.822z" fill="#fff"/></svg>
+                        <svg viewBox="0 0 38 24" width="38" height="24"><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"/><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#fff"/><path d="M23.942 14.107c0 .698-.477 1.254-1.263 1.254-.787 0-1.263-.556-1.263-1.254s.477-1.254 1.263-1.254c.786 0 1.263.556 1.263 1.254zm2.37-2.37h-1.58v.37c-.37-.296-.786-.444-1.32-.444-1.25 0-2.258 1.05-2.258 2.444 0 1.394 1.008 2.444 2.258 2.444.534 0 .95-.148 1.32-.444v.37h1.58v-4.74zm-9.285 2.37c0 .698-.477 1.254-1.263 1.254-.787 0-1.263-.556-1.263-1.254s.477-1.254 1.263-1.254c.786 0 1.263.556 1.263 1.254zm2.37-2.37h-1.58v.37c-.37-.296-.786-.444-1.32-.444-1.25 0-2.258 1.05-2.258 2.444 0 1.394 1.008 2.444 2.258 2.444.534 0 .95-.148 1.32-.444v.37h1.58v-4.74zm-9.286.74v-.74h-1.58v4.74h1.58v-2.517c0-.74.477-1.136 1.024-1.136.148 0 .31.028.477.084l.477-1.508c-.167-.056-.37-.084-.572-.084-.534 0-.95.24-1.406.714v-.553zm19.94-.74h-1.58v4.74h1.58v-2.517c0-.74.477-1.136 1.024-1.136.636 0 .913.37.913 1.025v2.628h1.58v-3.034c0-1.247-.694-1.78-1.728-1.78-.534 0-.97.24-1.406.714l-.383-.64z" fill="#003087"/></svg>
+                    </div>
+                </div>
+                <p class="footer-copy">&copy; 2024 Ronca Style P.I. 01807890239 REA VR 197557 Capitale Sociale &euro; 45.900 | <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Torna su">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
